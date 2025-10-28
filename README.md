@@ -1,136 +1,118 @@
-🇬🇧 Projeto de Estudo de Inglês (Iniciante → Avançado)
+Projeto de Estudo de Inglês
+Um aplicativo CLI (Command Line Interface) interativo para aprendizado de inglês, com mais de 40 exercícios organizados por níveis de dificuldade.
 
-Arquivo principal: Projeto_Estudo_Ingles.py
-Tipo: Aplicação de linha de comando (CLI)
-Objetivo: Oferecer uma forma interativa e prática de estudar inglês do nível iniciante ao avançado, com mais de 40 exercícios, treino de vocabulário e rastreamento de progresso.
 
-🧩 Funcionalidades Principais
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Mais de 40 exercícios organizados por nível:
+📋 Descrição
+Este projeto oferece uma plataforma completa para estudo de inglês, desde o nível iniciante até o avançado, através de exercícios interativos no terminal. O sistema inclui rastreamento de progresso, treinador de vocabulário e organização por níveis de dificuldade.
 
-🟢 Iniciante: vocabulário básico, verbo to be, cores, pronomes, frases simples.
 
-🟡 Intermediário: present simple, past simple, preposições, phrasal verbs, reading e modal verbs.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🔴 Avançado: voz passiva, conditionals, idioms, collocations e interpretação de textos.
+✨ Características
++40 exercícios divididos em 3 níveis: iniciante, intermediário e avançado
 
-Tipos de exercício: múltipla escolha, tradução, preencher lacunas, reordenação de frases, correspondência (match), conjugação e escrita aberta.
+Múltiplos tipos de exercícios: múltipla escolha, preenchimento, tradução, ordenação, correspondência e conjugação
 
-Treinador de vocabulário com palavras básicas (personalizável).
+Sistema de progresso com histórico de acertos
 
-Sistema de progresso automático (salvo em JSON localmente).
+Treinador de vocabulário personalizável
 
-Revisão rápida dos últimos exercícios realizados.
+Interface em português para facilitar o uso
 
-Exportação de progresso para arquivo .json.
+Arquivo único - fácil de executar e distribuir
 
-🧠 Estrutura do Projeto
-📁 Projeto_Estudo_Ingles/
-│
-├── Projeto_Estudo_Ingles.py       # Código principal (CLI)
-├── data_english_study/            # Pasta gerada automaticamente
-│   ├── progress.json              # Histórico de progresso
-│   └── vocab.json                 # Vocabulário básico do usuário
-└── README.md                      # Este arquivo
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 Como Usar
+Pré-requisitos
+Python 3.6 ou superior
 
-Certifique-se de ter o Python 3 instalado.
-Verifique com:
-
-python --version
-
-
-Execute o script principal:
-
+Execução
+bash
 python Projeto_Estudo_Ingles.py
+Funcionalidades Principais
+Menu Principal: Acesso a todas as funcionalidades
+
+Exercícios por Nível: Escolha entre iniciante, intermediário ou avançado
+
+Treinador de Vocabulário: Pratique com palavras básicas (expansível)
+
+Revisão Rápida: Veja seu progresso nos últimos exercícios
+
+Exportação de Progresso: Salve seus dados em arquivo JSON
 
 
-Use o menu interativo:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1 → Escolher nível e fazer exercício
+📁 Estrutura do Projeto
+text
+Projeto_Estudo_Ingles.py
+├── Configurações e utilitários
+├── Base de dados de exercícios (45+)
+├── Sistema de execução de exercícios
+├── Treinador de vocabulário
+├── Sistema de progresso
+└── Menu principal interativo
+🎯 Tipos de Exercícios
+Multiple Choice: Questões de múltipla escolha
 
-2 → Listar exercícios por nível
+Fill Blank: Preenchimento de lacunas
 
-3 → Treinador de vocabulário
+Translation: Tradução português-inglês
 
-4 → Revisão rápida (últimos 10 exercícios)
+Reorder: Ordenação de palavras/frases
 
-5 → Exportar progresso
+Match: Correspondência de pares
 
-6 → Sair
-
-Durante um exercício, digite q para voltar ao menu principal.
-
-💾 Armazenamento de Progresso
-
-Os dados do usuário são salvos automaticamente em:
-
-data_english_study/progress.json
-
-
-Isso inclui:
-
-Últimos exercícios feitos
-
-Pontuação individual por exercício
-
-Histórico com data e hora
-
-🧩 Personalização
-
-Você pode editar ou expandir o vocabulário abrindo o arquivo:
-
-data_english_study/vocab.json
+Conjugation: Conjugação verbal
 
 
-Exemplo de formato:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[
-  {"en": "dog", "pt": "cachorro"},
-  {"en": "book", "pt": "livro"}
-]
+💾 Sistema de Dados
+O projeto cria automaticamente uma pasta data_english_study contendo:
 
+progress.json: Histórico de progresso e scores
 
-Também é possível adicionar novos exercícios diretamente na lista EXERCISES dentro do código, seguindo o padrão existente.
-
-🧭 Estrutura dos Exercícios
-
-Cada exercício possui:
-
-{
-  "id": "E01",
-  "level": "iniciante",
-  "title": "Saudações - escolha múltipla",
-  "type": "multiple_choice",
-  "data": {
-      "question": "What is 'olá' in English?",
-      "options": ["goodbye", "hello", "please", "thanks"],
-      "answer": "hello"
-  }
-}
+vocab.json: Lista de vocabulário personalizável
 
 
-Tipos aceitos:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-"multiple_choice"
+🎮 Controles
+Digite q a qualquer momento para voltar ao menu principal
 
-"translation"
+Navegação por números nas opções de menu
 
-"fill_blank"
+Respostas em texto livre ou numéricas
 
-"reorder"
 
-"match"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-"conjugation"
 
-📦 Requisitos
+🔄 Expansão
+O projeto é facilmente expansível:
 
-Este projeto não utiliza bibliotecas externas.
-Funciona apenas com módulos padrão do Python (json, os, random, datetime, etc.).
+Adicione novos exercícios no array EXERCISES
 
-🧑‍💻 Autor
+Expanda o vocabulário no arquivo vocab.json
 
-Desenvolvido por: Vitor Procópio
-Descrição: Focado em criar ferramentas educacionais em Python para aprendizado interativo e acessível.
+Modifique os níveis de dificuldade conforme necessário
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+📊 Progresso
+O sistema monitora:
+
+Exercícios completados
+
+Taxa de acertos por exercício
+
+Histórico temporal de prática
+
+Vocabulário estudado
